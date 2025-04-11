@@ -1,0 +1,13 @@
+@use './globals';
+@use './mixin';
+@use './variables';
+
+$primary-color: #1e90ff;
+.card {
+padding: 1rem;
+background-color: $primary-color;
+h2 {
+font-size: 1.5rem;
+color: white;
+}
+}
