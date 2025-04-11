@@ -1,0 +1,29 @@
+@use './variables';
+@use './mixin';
+
+.card {
+    @include mixin.card-padding;
+    background-color: variables.$primary-color;
+
+    h2 {
+        @include mixin.heading-style;
+    }
+}
+
+.our-story-heading {
+    @include mixin.responsive-heading;
+    color: variables.$heading-color;
+}
+
+.our-story-paragraph {
+    @include mixin.responsive-paragraph;
+    color: variables.$text-color;
+    margin-bottom: 1rem;
+}
+
+.our-story-section {
+    @include mixin.section-padding;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
