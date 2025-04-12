@@ -1,13 +1,12 @@
-import './App.css';
-import './styles/custom.scss';
+import "./App.css";
+import BrandStats from "./components/BrandStats";
 
 function App() {
-
   return (
-    <>
-      <h1 className='font-black card'>Hello World</h1>
-    </>
-  )
+    <div>
+      <BrandStats />
+    </div>
+  );
 }
 
-export default App
+export default App;

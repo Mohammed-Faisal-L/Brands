@@ -1,0 +1,80 @@
+@use "./variables" as *;
+@use "./mixin" as *;
+
+.cards-wrapper {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  @include card-base($white, $black);
+  transition: background-color 0.7s, color 0.3s;
+
+  &.highlight {
+    @include card-base($red, $white);
+  }
+
+  &:hover {
+    background-color: $red;
+    color: $white;
+
+    .icon-circle {
+      background-color: $white;
+      color: $red;
+    }
+
+    .card-label {
+      color: $white;
+    }
+  }
+
+  .icon-circle-wrapper {
+    @include flex-center;
+  }
+
+  .icon-circle {
+    @include flex-center;
+    width: $icon-size;
+    height: $icon-size;
+    border-radius: 9999px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.5s, color 0.3s;
+
+    &.highlight {
+      background-color: $white;
+      color: $red;
+    }
+
+    &.default {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  .card-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card-label {
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    color: $gray-600;
+
+    &.highlight {
+      color: $white;
+    }
+  }
+}
