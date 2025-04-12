@@ -1,6 +1,31 @@
 @use "./variables" as *;
 @use "./mixin" as *;
 
+.card {
+    @include card-padding;
+    h2 {
+        @include heading-style;
+    }
+}
+
+.our-story-heading {
+    @include responsive-heading;
+    color: $heading-color;
+}
+
+.our-story-paragraph {
+    @include responsive-paragraph;
+    color: $text-color;
+    margin-bottom: 1rem;
+}
+
+.our-story-section {
+    @include section-padding;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .cards-wrapper {
   display: grid;
   gap: 1.5rem;
@@ -17,7 +42,7 @@
   }
 }
 
-.card {
+.card-info {
   @include card-base($white, $black);
   transition: background-color 0.7s, color 0.3s;
 

@@ -1,3 +1,11 @@
 @use './globals';
 @use './mixin';
 @use './variables';
+
+.xs-screen{
+    @media (max-width: 320px) {
+        nav{
+            display: none;
+        }
+    }
+}

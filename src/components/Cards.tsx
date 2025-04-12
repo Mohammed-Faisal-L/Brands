@@ -24,7 +24,7 @@ const Cards: React.FC = () => {
         return (
           <div
             key={index}
-            className={`card ${isHovered ? "hover-highlight" : ""}`}
+            className={`card-info ${isHovered ? "hover-highlight" : ""}`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
