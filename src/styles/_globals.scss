@@ -3,8 +3,6 @@
 
 .card {
     @include mixin.card-padding;
-    background-color: variables.$primary-color;
-
     h2 {
         @include mixin.heading-style;
     }
