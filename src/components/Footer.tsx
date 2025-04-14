@@ -1,24 +1,28 @@
 import React from "react";
 import { MdArrowForward } from "react-icons/md";
-import scannerImg from "../assets/QR.webp";
 import { IoLogoInstagram } from "react-icons/io5";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { BiLogoWhatsapp } from "react-icons/bi";
+import scannerImg from "../assets/QR.webp";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer id="footer" className="bg-black text-white w-full">
       <section className="grid md:grid-cols-5 sm:grid-cols-2 gap-10 px-6 py-14 max-w-7xl mx-auto">
         {/* Exclusive */}
-        <aside>
+        <aside className="px-4">
           <ul className="space-y-2 leading-[28px]">
             <li className="font-bold text-[24px]">Exclusive</li>
             <li className="text-[20px]">Subscribe</li>
             <li className="text-[16px]">Get 10% off your first order</li>
           </ul>
           <span className="flex justify-between relative mt-4 border-2 border-gray-300 p-2">
-            <input type="text" name="" id="" placeholder="enter your email" className="outline-0"/>
-            <MdArrowForward className="absolute right-0 text-2xl text-center text-white" />
+            <input
+              type="text"
+              placeholder="enter your email"
+              className="outline-0 w-full pr-8 bg-transparent text-white placeholder-white"
+            />
+            <MdArrowForward className="absolute right-2 top-1/2 -translate-y-1/2 text-2xl text-white cursor-pointer" />
           </span>
         </aside>
 
@@ -36,11 +40,11 @@ const Footer = () => {
         <aside>
           <ul className="space-y-2 leading-[28px]">
             <li className="font-bold text-[24px]">Account</li>
-            <li className="text-[16px]">My Account</li>
-            <li className="text-[16px]">Login / Register</li>
-            <li className="text-[16px]">Cart</li>
-            <li className="text-[16px]">Wishlist</li>
-            <li className="text-[16px]">Shop</li>
+            <li className="text-[16px]"><a href="#">My Account</a></li>
+            <li className="text-[16px]"><a href="#">Login / Register</a></li>
+            <li className="text-[16px]"><a href="#">Cart</a></li>
+            <li className="text-[16px]"><a href="#">Wishlist</a></li>
+            <li className="text-[16px]"><a href="#">Shop</a></li>
           </ul>
         </aside>
 
@@ -48,10 +52,10 @@ const Footer = () => {
         <aside>
           <ul className="space-y-2 leading-[28px]">
             <li className="font-bold text-[24px]">Quick Link</li>
-            <li className="text-[16px]">Privacy Policy</li>
-            <li className="text-[16px]">Terms Of Use</li>
-            <li className="text-[16px]">FAQ</li>
-            <li className="text-[16px]">Contact</li>
+            <li className="text-[16px]"><a href="#">Privacy Policy</a></li>
+            <li className="text-[16px]"><a href="#">Terms Of Use</a></li>
+            <li className="text-[16px]"><a href="#">FAQ</a></li>
+            <li className="text-[16px]"><a href="#">Contact</a></li>
           </ul>
         </aside>
 
@@ -66,14 +70,14 @@ const Footer = () => {
               <img
                 src={scannerImg}
                 alt="QR Code"
-                className="h-[80px] w-[80px] mx-auto"
+                className="h-[80px] w-[80px]"
               />
             </li>
             <li>
-              <div className="flex justify-center space-x-4 text-2xl mt-4">
-                <IoLogoInstagram />
-                <AiOutlineYoutube />
-                <BiLogoWhatsapp />
+              <div className="flex  space-x-4 text-2xl mt-4">
+                <a href="#"><IoLogoInstagram /></a>
+                <a href="#"><AiOutlineYoutube /></a>
+                <a href="#"><BiLogoWhatsapp /></a>
               </div>
             </li>
           </ul>
@@ -82,7 +86,7 @@ const Footer = () => {
 
       <section>
         <p className="italic opacity-60 py-4 text-center text-sm border-t border-gray-700">
-          Copyright © Rimel 2022. All rights reserved.
+          © Rimel 2022. All rights reserved.
         </p>
       </section>
     </footer>
