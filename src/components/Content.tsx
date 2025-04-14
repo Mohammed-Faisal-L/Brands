@@ -3,7 +3,7 @@ import articleImage from '../assets/articleImage.webp';
 
 const MyComponent: React.FC = () => {
     return (
-        <div className="flex flex-col-reverse md:flex-row w-full">
+        <div id='about' className="flex flex-col-reverse md:flex-row w-full">
             <div className="w-full md:w-1/2 our-story-section">
                 <div className="text-left ps-13">
                     <h1 className="our-story-heading">Our Story</h1>
