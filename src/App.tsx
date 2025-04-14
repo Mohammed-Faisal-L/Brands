@@ -4,6 +4,7 @@ import Header from './components/Header';
 import BrandStats from "./components/BrandStats";
 import ProductGridWithSearch from "./components/Grid";
 import Footer from "./components/Footer";
+import ServiceCard from "./components/ServiceCard";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <MyComponent/>
       <BrandStats />
       <ProductGridWithSearch/>
+      <ServiceCard />
       <Footer/>
     </>
   )
